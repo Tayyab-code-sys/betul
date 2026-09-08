@@ -47,11 +47,11 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 700; lette
 .kicker::before { content: ""; width: 22px; height: 2px; background: var(--accent); display: inline-block; }
 
 /* ---------------- NAV ---------------- */
-.nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line-soft); transition: background 0.3s ease, border-color 0.3s ease; }
+.nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(12px); border-bottom: none; transition: background 0.3s ease, border-color 0.3s ease; }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; transition: max-width 0.4s cubic-bezier(0.2,0.7,0.2,1), margin 0.4s cubic-bezier(0.2,0.7,0.2,1), height 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease, padding 0.3s ease, border-color 0.3s ease; }
-/* On scroll, the nav collapses into a centered floating capsule */
+/* On scroll, the nav collapses into a compact centered floating capsule */
 .nav.capsule { background: transparent; backdrop-filter: none; border-bottom-color: transparent; }
-.nav.capsule .wrap { max-width: 720px; margin: 12px auto; height: 56px; padding: 0 12px 0 20px; background: color-mix(in srgb, var(--card) 90%, transparent); backdrop-filter: blur(14px); border: 1px solid var(--line); border-radius: 999px; box-shadow: 0 18px 44px -22px rgba(0,0,0,0.45); }
+.nav.capsule .wrap { width: fit-content; max-width: calc(100% - 32px); margin: 12px auto; height: 52px; gap: 22px; justify-content: center; padding: 0 10px 0 20px; background: color-mix(in srgb, var(--card) 72%, transparent); backdrop-filter: blur(16px) saturate(1.2); border: 1px solid var(--line); border-radius: 999px; box-shadow: 0 20px 46px -24px rgba(0,0,0,0.5); }
 .brand { display: flex; align-items: center; gap: 11px; font-family: var(--font-display); font-weight: 800; font-size: 21px; color: var(--ink); }
 .brand img { border-radius: 9px; display: block; box-shadow: var(--shadow-sm); }
 .nav-right { display: flex; align-items: center; gap: 16px; }
@@ -74,7 +74,7 @@ h1, h2, h3, .display { font-family: var(--font-display); font-weight: 700; lette
 .point p { font-size: 14px; margin: 0; color: var(--muted); }
 
 /* ---------------- PROGRESS ---------------- */
-.progress-bar { position: sticky; top: 66px; z-index: 40; height: 4px; background: var(--line-soft); }
+.progress-bar { position: sticky; top: 66px; z-index: 40; height: 4px; background: transparent; }
 .progress-bar .fillp { height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width 0.4s ease; }
 
 /* ---------------- FORM ---------------- */
