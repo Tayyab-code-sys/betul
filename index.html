@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Betul - Yurt dışı için doğru vizeyi bulun</title>
+  <meta name="description" content="Yurt dışında yaşamak, çalışmak veya okumak isteyen herkes için: her ülkenin sunduğu vizeleri tek bir yerde bulun. Fikrimiz hakkında görüşünüzü paylaşın." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <div class="brand"><img src="assets/favicon.svg" alt="" width="30" height="30" /> Betul</div>
+      <a class="nav-link" href="dashboard.html">Panel girişi</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <span class="kicker">Yurt dışına açılın</span>
+          <h1>Doğru vizeyi bulmak <span class="grad">artık kolay.</span></h1>
+          <p class="lead">Yurt dışında yaşamak, çalışmak veya okumak mı istiyorsunuz? Size uygun vizeleri tek bir yerde bulun.</p>
+          <p class="lead">Bu siteyi yapmadan önce sizin fikrinizi almak istiyoruz.</p>
+          <a href="#survey" class="hero-cta">Ankete başla <span class="arrow">&rarr;</span></a>
+          <div class="hero-meta">2 dakika sürer &middot; Tamamen ücretsiz</div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="pass">
+            <div class="pass-top">
+              <div class="pass-notch l"></div>
+              <div class="pass-notch r"></div>
+              <div class="label">Biniş kartı &middot; Boarding pass</div>
+              <div class="pass-route">
+                <span class="code">TR</span>
+                <span class="path">
+                  <svg viewBox="0 0 120 26" preserveAspectRatio="none">
+                    <path d="M2 22 Q 60 -6 118 8" stroke="#f0b429" stroke-width="2" fill="none" stroke-dasharray="2 5" stroke-linecap="round"/>
+                    <path d="M110 3l8 5-9 3 1.5-4z" fill="#f0b429"/>
+                  </svg>
+                </span>
+                <span class="code">&#127758;</span>
+              </div>
+              <div class="pass-city"><span>Türkiye</span><span>Yeni hayat</span></div>
+            </div>
+            <div class="pass-perf"></div>
+            <div class="pass-bottom">
+              <div class="pass-field"><div class="k">Yolcu</div><div class="v">Siz</div></div>
+              <div class="pass-field"><div class="k">Vize</div><div class="v">Doğru olan</div></div>
+              <div class="pass-field"><div class="k">Tarih</div><div class="v">Yakında</div></div>
+            </div>
+          </div>
+
+          <div class="flags">
+            <span class="flag-chip"><span class="em">&#127465;&#127466;</span> Almanya</span>
+            <span class="flag-chip"><span class="em">&#127482;&#127480;</span> ABD</span>
+            <span class="flag-chip"><span class="em">&#127464;&#127462;</span> Kanada</span>
+            <span class="flag-chip"><span class="em">&#127462;&#127482;</span> Avustralya</span>
+            <span class="flag-chip"><span class="em">&#127468;&#127463;</span> İngiltere</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="idea">
+    <div class="wrap narrow">
+      <div class="idea-card">
+        <span class="kicker">Fikir</span>
+        <h2>Fikir çok basit</h2>
+        <p>Almanya, ABD, Kanada, Avustralya, İngiltere ve daha fazlası. Her ülkenin hangi vizeleri sunduğunu, kimin başvurabileceğini ve nasıl başvurulacağını tek bir yerde göstereceğiz.</p>
+        <div class="idea-points">
+          <div class="point"><div class="n">01 &middot; ARAŞTIR</div><h3>Ülkeyi seçin</h3><p>Size uygun vizeleri saniyeler içinde görün.</p></div>
+          <div class="point"><div class="n">02 &middot; KARŞILAŞTIR</div><h3>Seçenekleri görün</h3><p>Oturum, iş, eğitim, vatandaşlık. Hepsi net.</p></div>
+          <div class="point"><div class="n">03 &middot; BAŞVUR</div><h3>Adımları öğrenin</h3><p>Doğru yolu ve resmi kaynakları öğrenin.</p></div>
+        </div>
+        <p style="margin-top:22px;">Peki bu iyi bir fikir mi? Aşağıdaki kısa anket bize yol gösterecek.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="progress-bar"><div class="fillp" id="fillp"></div></div>
+
+  <section class="form-section" id="survey">
+    <div class="wrap narrow">
+      <div class="section-title">
+        <span class="kicker" style="justify-content:center;">Kısa anket</span>
+        <h2>Fikrinizi paylaşın</h2>
+        <p>Tüm sorular çoktan seçmeli. Dürüst cevaplarınız çok değerli.</p>
+      </div>
+
+      <form id="survey-form">
+        <div id="questions"></div>
+        <button type="submit" class="submit-btn" id="submit-btn">Yanıtlarımı gönder</button>
+        <div class="error-line" id="error-line"></div>
+        <p class="form-note">Yanıtlarınız gizlidir. Sadece Betul görebilir.</p>
+      </form>
+
+      <div class="thanks" id="thanks">
+        <div class="stamp">ONAYLANDI</div>
+        <h2>Teşekkür ederiz!</h2>
+        <p>Yanıtlarınızı aldık. Fikriniz bu projeyi doğru şekilde kurmamıza yardım ediyor.</p>
+        <p>Fikir hakkında konuşmak ister misiniz? Betul'a WhatsApp'tan yazabilirsiniz.</p>
+        <a class="wa-btn" id="wa-thanks" href="#" target="_blank" rel="noopener">WhatsApp'tan yaz</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap">
+      <h2>Sorunuz mu var?</h2>
+      <p>Bu proje hakkında bize ulaşın.</p>
+      <a class="wa-btn" id="wa-contact" href="#" target="_blank" rel="noopener">&#128241; Betul'a WhatsApp'tan yaz</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p>Betul &middot; Yurt dışı yolculuğunuz için doğru vize bilgisi</p>
+      <p class="built-by"><a href="https://tfhsoftware.com/" target="_blank" rel="noopener">TFH Software</a> tarafından yapıldı</p>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="assets/survey.js"></script>
+</body>
+</html>

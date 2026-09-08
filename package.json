@@ -1,0 +1,9 @@
+{
+  "name": "betul-survey",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Survey and dashboard for the visa information directory idea.",
+  "scripts": {
+    "dev": "node dev-server.js"
+  }
+}

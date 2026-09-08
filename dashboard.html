@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Betul - Control Tower</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/dashboard.css" />
+</head>
+<body>
+
+  <!-- ============ LOGIN ============ -->
+  <div id="login-screen" class="login-wrap">
+    <div class="login-card">
+      <img class="login-mark" src="assets/favicon.svg" alt="" width="48" height="48" />
+      <span class="kicker">Betul &middot; Private</span>
+      <h1 class="login-title">Control Tower</h1>
+      <p class="login-sub">Every answer from your survey, in one place. Enter your password to view them.</p>
+      <input class="field" type="password" id="pw-input" placeholder="Password" autocomplete="current-password" />
+      <button class="btn-primary" id="pw-btn">Open dashboard</button>
+      <div class="error-line" id="login-error"></div>
+      <a class="back-link" href="index.html">&larr; Back to the survey</a>
+    </div>
+  </div>
+
+  <!-- ============ DASHBOARD ============ -->
+  <div id="dash-screen" style="display:none;">
+    <header class="masthead">
+      <div class="masthead-inner">
+        <div class="mast-brand">
+          <img class="mast-mark" src="assets/favicon.svg" alt="" width="42" height="42" />
+          <h1 class="mast-title">Control Tower <span class="sub">BETUL &middot; VISA SURVEY</span></h1>
+        </div>
+        <div class="mast-right">
+          <span class="mast-clock" id="mast-clock"></span>
+          <button class="btn-ghost" id="logout-btn">Log out</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div id="dash-loading" class="dash-loading">Loading answers…</div>
+
+      <div id="dash-content" style="display:none;">
+        <section class="stat-band" id="stat-band"></section>
+
+        <section class="section-head">
+          <h2>What people said</h2>
+          <span class="rule"></span>
+        </section>
+        <section class="charts-grid" id="charts"></section>
+
+        <section class="section-head">
+          <h2>Everyone who answered</h2>
+          <span class="rule"></span>
+        </section>
+        <section class="ledger">
+          <div class="table-scroll">
+            <table class="resp-table" id="resp-table"></table>
+          </div>
+        </section>
+      </div>
+
+      <div class="error-line center" id="dash-error"></div>
+    </main>
+
+    <footer class="dash-foot">Betul &middot; Built by TFH Software</footer>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="assets/dashboard.js"></script>
+</body>
+</html>
